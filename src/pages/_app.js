@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }) {
         <title> Next Js Project </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </Layout>
   );
 }
