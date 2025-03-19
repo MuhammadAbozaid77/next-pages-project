@@ -1,8 +1,16 @@
 export default function handler(req, res) {
+  const { commentId } = req.query;
+
   // const eventId =
   //------------- POST-API -------------
   if (req.method === "POST") {
     const { enteredEmail, enteredName, enteredText } = req.body;
+    const storedObject = {
+      id: new Date().toISOString(),
+      enteredEmail,
+      enteredName,
+      enteredText,
+    };
     // Server Validation Of Data Object
     if (
       !enteredEmail ||
@@ -18,7 +26,7 @@ export default function handler(req, res) {
 
     res.status(201).json({
       message: "Data Added Successfuly",
-      data: { enteredEmail, enteredName, enteredText },
+      data: storedObject,
     });
   }
 

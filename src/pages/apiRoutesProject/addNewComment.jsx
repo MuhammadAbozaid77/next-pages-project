@@ -2,7 +2,6 @@ import Button from "@/components/Button";
 import { useRef } from "react";
 
 export default function AddNewComment() {
-
   const emailRef = useRef();
   const nameRef = useRef();
   const textRef = useRef();
@@ -22,7 +21,7 @@ export default function AddNewComment() {
   };
 
   return (
-    <div>
+    <div className="flex justify-center items-center mt-[50px]">
       <div>
         <form
           onSubmit={handelFormData}
